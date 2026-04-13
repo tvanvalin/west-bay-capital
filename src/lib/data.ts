@@ -107,8 +107,7 @@ export const teamMembers = [
     title: "Manager, Investment Portfolio",
     phone: "310-231-1270 x223",
     email: "wmcbride@westbayllc.com",
-    image:
-      "https://static.wixstatic.com/media/f2754c_be7f48588aff4407af03540d313fdb5b~mv2.jpeg/v1/fill/w_497,h_601,al_c,q_80,enc_auto,quality_auto/William%20McBride.jpeg",
+    image: "/images/team/william-mcbride.jpg",
     slug: "william-mcbride",
   },
   {
@@ -116,8 +115,7 @@ export const teamMembers = [
     title: "Manager, Investment Portfolio",
     phone: "310-345-3355",
     email: "emarek@westbayllc.com",
-    image:
-      "https://static.wixstatic.com/media/f2754c_2d39fa47a06344979f057c4629624ca7~mv2.jpeg/v1/fill/w_497,h_601,al_c,q_80,enc_auto,quality_auto/Edward%20Marek.jpeg",
+    image: "/images/team/edward-marek.jpg",
     slug: "edward-marek",
   },
   {
@@ -125,8 +123,7 @@ export const teamMembers = [
     title: "Vice President, Originations",
     phone: "310-231-1270 x242",
     email: "mpoyer@westbayllc.com",
-    image:
-      "https://static.wixstatic.com/media/f2754c_113a1f461a944518a685e01132d23804~mv2.jpeg/v1/fill/w_497,h_601,al_c,q_80,enc_auto,quality_auto/Michael%20Poyer.jpeg",
+    image: "/images/team/michael-poyer.jpg",
     slug: "michael-poyer",
   },
   {
@@ -134,8 +131,7 @@ export const teamMembers = [
     title: "Marketing Director",
     phone: "310-231-1270 x226",
     email: "cquinn@westbayllc.com",
-    image:
-      "https://static.wixstatic.com/media/f2754c_d77b4903cf9f4c8981bf7d8d2e79e41c~mv2.jpeg/v1/fill/w_497,h_601,al_c,q_80,enc_auto,quality_auto/Craig%20Quinn.jpeg",
+    image: "/images/team/craig-quinn.jpg",
     slug: "craig-quinn",
   },
   {
@@ -143,8 +139,7 @@ export const teamMembers = [
     title: "Managing Director, Originations",
     phone: "310-231-1270 x275",
     email: "kprince@westbayllc.com",
-    image:
-      "https://static.wixstatic.com/media/f2754c_2042e441370842fa959cc9239691219f~mv2.jpeg/v1/fill/w_497,h_601,al_c,q_80,enc_auto,quality_auto/Kevin%20Prince.jpeg",
+    image: "/images/team/kevin-prince.jpg",
     slug: "kevin-prince",
   },
   {
@@ -152,8 +147,7 @@ export const teamMembers = [
     title: "Underwriter",
     phone: "310-231-1270 x228",
     email: "dhill@westbayllc.com",
-    image:
-      "https://static.wixstatic.com/media/f2754c_69d4826aa5bb4900bc9c720c3cce8701~mv2.jpeg/v1/fill/w_497,h_601,al_c,q_80,enc_auto,quality_auto/Darren%20Hill.jpeg",
+    image: "/images/team/darren-hill.jpg",
     slug: "darren-hill",
   },
   {
@@ -161,8 +155,7 @@ export const teamMembers = [
     title: "Fund Administrator",
     phone: "310-231-1270 x274",
     email: "aderagisch@westbayllc.com",
-    image:
-      "https://static.wixstatic.com/media/f2754c_ca44c94a7136459f923b689fb105f895~mv2.jpeg/v1/fill/w_497,h_601,al_c,q_80,enc_auto,quality_auto/Adam%20Deragisch.jpeg",
+    image: "/images/team/adam-deragisch.jpg",
     slug: "adam-deragisch",
   },
   {
@@ -170,8 +163,7 @@ export const teamMembers = [
     title: "Director, Originations",
     phone: "310-231-1270 x235",
     email: "kmcbride@westbayllc.com",
-    image:
-      "https://static.wixstatic.com/media/f2754c_b422d9b4f75f49ada512c7200d34319f~mv2.jpg/v1/fill/w_497,h_601,al_c,q_80,enc_auto,quality_auto/Kyle%20McBride_edited.jpg",
+    image: "/images/team/kyle-mcbride.jpg",
     slug: "kyle-mcbride",
   },
 ];
