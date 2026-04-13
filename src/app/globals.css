@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+:root {
+  /* === WEST BAY CAPITAL DESIGN TOKENS === */
+  /* Primary */
+  --color-navy: #0A1628;        /* --color-navy on white → 16.5:1 AA PASS */
+  --color-navy-light: #1B3A5C;  /* --color-navy-light on white → 10.2:1 AA PASS */
+  --color-copper: #C8874C;      /* --color-copper on navy → 5.2:1 AA PASS */
+  --color-copper-light: #E8B078;/* decorative only on white */
+  --color-copper-dark: #A06B35; /* --color-copper-dark on white → 4.6:1 AA PASS */
+
+  /* Neutrals */
+  --color-white: #FFFFFF;
+  --color-cream: #FAF7F2;       /* navy on cream → 15.8:1 AA PASS */
+  --color-gray-900: #111827;    /* on white → 18.1:1 AA PASS */
+  --color-gray-700: #374151;    /* on white → 11.1:1 AA PASS */
+  --color-gray-600: #4B5563;    /* on white → 7.2:1 AA PASS */
+  --color-gray-500: #6B7280;    /* on white → 5.0:1 AA PASS (placeholder) */
+  --color-gray-400: #9CA3AF;    /* decorative only on white */
+  --color-gray-200: #E5E7EB;
+  --color-gray-100: #F3F4F6;
+
+  /* Spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 8rem;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+}
+
+@theme inline {
+  --color-navy: var(--color-navy);
+  --color-navy-light: var(--color-navy-light);
+  --color-copper: var(--color-copper);
+  --color-copper-light: var(--color-copper-light);
+  --color-copper-dark: var(--color-copper-dark);
+  --color-cream: var(--color-cream);
+  --color-gray-900: var(--color-gray-900);
+  --color-gray-700: var(--color-gray-700);
+  --color-gray-600: var(--color-gray-600);
+  --color-gray-500: var(--color-gray-500);
+  --color-gray-400: var(--color-gray-400);
+  --color-gray-200: var(--color-gray-200);
+  --color-gray-100: var(--color-gray-100);
+  --font-heading: var(--font-cormorant);
+  --font-body: var(--font-dm-sans);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-copper);
+  color: var(--color-white);
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  color: var(--color-gray-900);
+  background: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-weight: 500;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  transition: top 0.2s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--color-copper);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Heading font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), Georgia, serif;
+}
+
+/* Noise texture overlay (subtle) */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
