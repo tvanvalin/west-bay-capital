@@ -2,6 +2,7 @@
 
 import { ArrowRight, Clock, DollarSign, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 export function HeroSection() {
@@ -10,19 +11,20 @@ export function HeroSection() {
       className="relative min-h-screen flex items-center overflow-hidden bg-[var(--color-navy)]"
       aria-label="Hero"
     >
-      {/* Background gradient + subtle pattern */}
+      {/* Background hero image */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-navy)] via-[var(--color-navy-light)]/40 to-[var(--color-navy)]" />
-        {/* Decorative geometric lines */}
-        <div className="absolute top-0 right-0 w-1/2 h-full opacity-[0.04]">
-          <svg viewBox="0 0 800 800" className="w-full h-full">
-            <line x1="0" y1="0" x2="800" y2="800" stroke="white" strokeWidth="1" />
-            <line x1="200" y1="0" x2="800" y2="600" stroke="white" strokeWidth="1" />
-            <line x1="400" y1="0" x2="800" y2="400" stroke="white" strokeWidth="1" />
-            <line x1="0" y1="200" x2="600" y2="800" stroke="white" strokeWidth="1" />
-            <line x1="0" y1="400" x2="400" y2="800" stroke="white" strokeWidth="1" />
-          </svg>
-        </div>
+        <Image
+          src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80&fit=crop"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[var(--color-navy)]/75" />
+        {/* Gradient fade for depth */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-navy)]/90 via-[var(--color-navy)]/60 to-transparent" />
         {/* Copper accent glow */}
         <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-[var(--color-copper)]/10 blur-3xl" />
       </div>
