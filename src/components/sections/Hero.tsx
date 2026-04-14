@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { WestBayEmblem } from "@/components/WestBayEmblem";
 
 export function HeroSection() {
   return (
@@ -93,20 +92,23 @@ export function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right — Big emblem */}
+          {/* Right — Big logo */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.85 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
             className="lg:col-span-2 hidden lg:flex items-center justify-center"
           >
             <div className="relative">
-              {/* Copper glow behind emblem */}
-              <div className="absolute inset-0 scale-110 bg-[var(--color-copper)]/8 rounded-full blur-3xl" />
-              <WestBayEmblem
-                className="w-72 h-72 xl:w-96 xl:h-96 drop-shadow-2xl"
-                color="rgba(255,255,255,0.85)"
-                accentColor="var(--color-copper-light)"
+              {/* Copper glow behind logo */}
+              <div className="absolute inset-0 scale-125 bg-[var(--color-copper)]/10 rounded-full blur-3xl" />
+              <Image
+                src="/images/brand/logo-white.png"
+                alt="West Bay Capital"
+                width={800}
+                height={325}
+                className="w-80 xl:w-[420px] h-auto drop-shadow-2xl opacity-90"
+                priority
               />
             </div>
           </motion.div>
@@ -136,17 +138,19 @@ export function HeroSection() {
           ))}
         </motion.div>
 
-        {/* Large background emblem — visible on all screens as a watermark */}
+        {/* Large background logo — visible on mobile as a watermark */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, delay: 0.3 }}
           className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 pointer-events-none lg:hidden"
         >
-          <WestBayEmblem
-            className="w-80 h-80 opacity-[0.06]"
-            color="white"
-            accentColor="var(--color-copper)"
+          <Image
+            src="/images/brand/logo-white.png"
+            alt=""
+            width={800}
+            height={325}
+            className="w-72 h-auto opacity-[0.06]"
           />
         </motion.div>
       </div>
