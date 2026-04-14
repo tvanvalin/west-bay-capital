@@ -92,24 +92,45 @@ export function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right — Big logo */}
+          {/* Right Stats — spans 2 columns */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-            className="lg:col-span-2 hidden lg:flex items-center justify-center"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            className="lg:col-span-2 hidden lg:block"
           >
-            <div className="relative">
-              {/* Copper glow behind logo */}
-              <div className="absolute inset-0 scale-125 bg-[var(--color-copper)]/10 rounded-full blur-3xl" />
-              <Image
-                src="/images/brand/logo-white.png"
-                alt="West Bay Capital"
-                width={800}
-                height={325}
-                className="w-80 xl:w-[420px] h-auto drop-shadow-2xl opacity-90"
-                priority
-              />
+            <div className="space-y-6">
+              {[
+                {
+                  label: "Loan Size",
+                  value: "$1M – $15M",
+                },
+                {
+                  label: "Closing Speed",
+                  value: "As Few as 9 Days",
+                },
+                {
+                  label: "Territory",
+                  value: "Nationwide (USA)",
+                },
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
+                  className="group flex items-center gap-5 rounded-xl bg-white/[0.04] border border-white/[0.08] p-5 backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.07] hover:border-[var(--color-copper)]/30"
+                >
+                  <div>
+                    <p className="text-sm text-white/50 font-medium">
+                      {stat.label}
+                    </p>
+                    <p className="text-xl font-heading font-semibold text-white">
+                      {stat.value}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
@@ -138,21 +159,6 @@ export function HeroSection() {
           ))}
         </motion.div>
 
-        {/* Large background logo — visible on mobile as a watermark */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.3 }}
-          className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 pointer-events-none lg:hidden"
-        >
-          <Image
-            src="/images/brand/logo-white.png"
-            alt=""
-            width={800}
-            height={325}
-            className="w-72 h-auto opacity-[0.06]"
-          />
-        </motion.div>
       </div>
 
       {/* Scroll indicator */}
