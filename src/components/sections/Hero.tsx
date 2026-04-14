@@ -1,9 +1,10 @@
 "use client";
 
-import { ArrowRight, Clock, DollarSign, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { WestBayEmblem } from "@/components/WestBayEmblem";
 
 export function HeroSection() {
   return (
@@ -92,51 +93,21 @@ export function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right Stats — spans 2 columns */}
+          {/* Right — Big emblem */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-            className="lg:col-span-2 hidden lg:block"
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+            className="lg:col-span-2 hidden lg:flex items-center justify-center"
           >
-            <div className="space-y-6">
-              {[
-                {
-                  icon: DollarSign,
-                  label: "Loan Size",
-                  value: "$1M – $15M",
-                },
-                {
-                  icon: Clock,
-                  label: "Closing Speed",
-                  value: "As Few as 9 Days",
-                },
-                {
-                  icon: MapPin,
-                  label: "Territory",
-                  value: "Nationwide (USA)",
-                },
-              ].map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
-                  className="group flex items-center gap-5 rounded-xl bg-white/[0.04] border border-white/[0.08] p-5 backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.07] hover:border-[var(--color-copper)]/30"
-                >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[var(--color-copper)]/10">
-                    <stat.icon className="h-6 w-6 text-[var(--color-copper-light)]" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-white/50 font-medium">
-                      {stat.label}
-                    </p>
-                    <p className="text-xl font-heading font-semibold text-white">
-                      {stat.value}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="relative">
+              {/* Copper glow behind emblem */}
+              <div className="absolute inset-0 scale-110 bg-[var(--color-copper)]/8 rounded-full blur-3xl" />
+              <WestBayEmblem
+                className="w-72 h-72 xl:w-96 xl:h-96 drop-shadow-2xl"
+                color="rgba(255,255,255,0.85)"
+                accentColor="var(--color-copper-light)"
+              />
             </div>
           </motion.div>
         </div>
@@ -163,6 +134,20 @@ export function HeroSection() {
               </p>
             </div>
           ))}
+        </motion.div>
+
+        {/* Large background emblem — visible on all screens as a watermark */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.3 }}
+          className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 pointer-events-none lg:hidden"
+        >
+          <WestBayEmblem
+            className="w-80 h-80 opacity-[0.06]"
+            color="white"
+            accentColor="var(--color-copper)"
+          />
         </motion.div>
       </div>
 
