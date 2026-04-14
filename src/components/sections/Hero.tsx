@@ -39,7 +39,7 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <span className="inline-block text-[var(--color-copper)] text-sm font-semibold tracking-[0.2em] uppercase mb-6">
-                Private Money Lending
+                West Bay Capital
               </span>
             </motion.div>
 
@@ -49,10 +49,10 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="font-heading text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[1.08] mb-6"
             >
-              Close Your Deal
+              The Bridge Between
               <br />
               <span className="text-[var(--color-copper-light)]">
-                in Days, Not Months
+                Private Capital &amp; CRE
               </span>
             </motion.h1>
 
@@ -62,10 +62,11 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-lg md:text-xl text-white/70 max-w-xl mb-10 leading-relaxed"
             >
-              West Bay Capital funds{" "}
-              <strong className="text-white">$1M&ndash;$15M</strong> commercial
-              real estate loans across the United States. Bridge, acquisition,
-              refinance, and construction &mdash; funded in as few as{" "}
+              For over a decade, West Bay Capital has been the trusted
+              partner investors and borrowers turn to when banks say no.
+              Over 100 years of combined experience.{" "}
+              <strong className="text-white">$1M&ndash;$15M</strong> loans
+              closed in as few as{" "}
               <strong className="text-white">9 business days</strong>.
             </motion.p>
 
